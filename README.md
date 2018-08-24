@@ -1,1 +1,1 @@
-# Cowl
+# COWL Online Writing Lab

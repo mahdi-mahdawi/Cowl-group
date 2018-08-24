@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+
+
+function validate_ans()
+{
+	window.location.href = 'vid4.html';
+}
+
+
+function myfunction()
+{
+  
+	var q1=document.f1.ques1;  
+	var q2=document.f1.ques2;  
+	var q3=document.f1.ques3;  
+	var q4=document.f1.ques4;  
+	var k=0;
+
+	for(var j=0;j<q1.length;j++)
+	{
+	   if(q1[j].checked)
+		{
+		k=1;
+		}
+	}
+	for(var j=0;j<q2.length;j++)
+	{
+	   if(q2[j].checked)
+		{
+		k=2;
+		}
+	}
+	for(var j=0;j<q3.length;j++)
+	{
+	   if(q3[j].checked)
+		{
+		k=3;
+		}
+	}
+	for(var j=0;j<q4.length;j++)
+	{
+	   if(q4[j].checked)
+		{
+		k=4;
+		}
+	}
+	if(k==4)
+	{
+		document.getElementById("p1").disabled = false;      
+
+	}
+
+
+}
+
+function button_disable()
+{
+document.getElementById("p1").disabled = true;
+}
+
+</script>
+</head>
+
+
+<body onload =button_disable()>
+      <h1>CAPS COWL PROTOTYPE</h1>
+      <center>
+<form name="f1" action="">
+FORM QUESTIONS--------- <br><br><br>
+ 1 <br><input type="radio"  onclick="myfunction()" name="ques1" value="male"> Question 1<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="female">Question 2<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="other">Question 3<br>
+   <input type="radio" onclick="myfunction()" name="ques1" value="male">Question 4<br><br>
+
+ 2 <br><input type="radio" onclick="myfunction()" name="ques2" value="male"> Question 1<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="female">Question 2<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="other">Question 3<br>
+   <input type="radio" onclick="myfunction()" name="ques2" value="male">Question 4<br>
+
+
+ 3 <br><input type="radio" onclick="myfunction()" name="ques3" value="male"> Question 1<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="female">Question 2<br>
+   <input type="radio"  onclick="myfunction()" name="ques3" value="other">Question 3<br>
+   <input type="radio" onclick="myfunction()" name="ques3" value="male">Question 4<br>
+
+
+ 4 <br><input type="radio" onclick="myfunction()" name="ques4" value="male"> Question 1<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="female">Question 2<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="other">Question 3<br>
+   <input type="radio" onclick="myfunction()" name="ques4" value="male">Question 4<br>
+
+
+ <button type="button" id ="p1" onclick = "validate_ans()">NEXT</button> 
+    <a href="vid3.html">BACK </a>
+</form>
+
+
+</center>
+</body>
+</html>
